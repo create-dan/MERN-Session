@@ -1,0 +1,32 @@
+v8 engine
+library vs framework
+react states
+
+dependency tree
+webpack - 
+npx - template (node package execute)
+
+3 ways to declare function in node
+
+arrow function 
+binding 
+af stops the binding
+
+
+let vs var
+
+let = function scope
+var = global scope 
+
+
+sql vs nosql 
+
+not only sql (nosql)
+nosql : high scalabilty , high availability , big data capability , easy replication , fast performance
+
+sql = table and row
+collection = table 
+document = row 
+
+
+
