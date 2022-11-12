@@ -30,12 +30,21 @@
 
 const bodyParser = require("body-parser");
 const express = require("express");
-const port = 5000;
+const dotenv = require("dotenv");
+const taskRoutes = require("./routes/taskRoutes");
+
+dotenv.config();
+
+const port = process.env.PORT ||  5000;
 const cors = require("cors");
 
 const app = express();
 app.use(bodyParser.json());
 app.use(cors());
+const connectDB = require("./db/db");
+connectDB();
+app.use(express.json());
+
 
 const allTasks = [
   {
@@ -47,6 +56,9 @@ const allTasks = [
     task: "Sleep",
   },
 ];
+
+app.use("/api/tasks", taskRoutes);
+
 
 app.get("/tasks", (req, res) => {
   return res.json(allTasks);
